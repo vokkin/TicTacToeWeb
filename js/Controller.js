@@ -58,7 +58,7 @@ export function game(){
         kletki[rand] = 0;
         
         if(checkWin(coor_pc)){
-            document.getElementById("win").innerHTML = "Вы проиграли";
+            document.getElementById("win").innerHTML = "Победил PC";
             del_list();
         }else{
             var draw = true;
@@ -66,7 +66,7 @@ export function game(){
                 if(cell[i].innerHTML == '') draw = false;
             }
             if(draw){;
-                document.getElementById("win").innerHTML = "Ничья)";
+                document.getElementById("win").innerHTML = "Ничья";
                 del_list();
             }
         }
@@ -89,7 +89,7 @@ export function game(){
             }
         }
         if(checkWin(coor_pl)){
-            document.getElementById("win").innerHTML = "Победил " + name;
+            document.getElementById("win").innerHTML = "Вы победили";
             del_list();
         }else{
             var draw = true;
@@ -97,7 +97,7 @@ export function game(){
                 if(cell[i].innerHTML == '') draw = false;
             }
             if(draw){
-                document.getElementById("win").innerHTML = "Ничья)";
+                document.getElementById("win").innerHTML = "Ничья";
                 del_list();
             }
         }
