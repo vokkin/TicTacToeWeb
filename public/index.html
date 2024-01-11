@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Крестики-нолики</title>
+        <link rel="stylesheet" href="./styles/style.css">
+		<link rel="shortcut icon" href="./favicon.ico">
+    </head>
+    <body>
+        <h1 class="game-title">Крестики-нолики</h1>
+        
+        <div class="menu-wrapper" id="menu-wrapper">
+            <button type="button" class="btn" id="play-btn">Играть</button>
+            <button type="button" class="btn" id="list-btn">Список</button>
+            <button type="button" class="btn" id="reply-btn">Повтор</button>
+        </div>
+
+        <div class="board-wrapper hide" id="board-wrapper">
+            <div class="board" id="board"></div>
+            <span class="msg" id="end-game-msg"></span>
+            <button type="button" class="btn" onclick="onResetClick()">Сбросить</button>
+            <button type="button" class="btn" onclick="backToMenu()">Назад</button>
+        </div>
+
+        <div class="list-wrapper hide" id="list-wrapper">
+            <div class="list" id="list"></div>
+            <button type="button" class="btn" onclick="backToMenu()">Назад</button>
+        </div>
+
+        <div class="reply-wrapper hide" id="reply-wrapper">
+            <div class="reply" id="reply"></div>
+            <span class="msg" id="reply-msg"></span>
+            <button type="button" class="btn" onclick="onRenew()">Обновить</button>
+            <button type="button" class="btn" onclick="backToMenu()">Назад</button>
+        </div>
+
+        <script type="module" src="./js/controller.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/idb@7/build/umd.js"></script>
+    </body>
+</html>
